@@ -1,15 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En Construcción</title>
-  <style>
-    body { display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; background: #f0f0f0; }
-    h1 { color: #333; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Melissa & Ismael</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop') center/cover no-repeat fixed;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            color: #ffffff;
+            padding: 40px;
+            background: rgba(139, 69, 19, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-in;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ornament {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .nombres {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin: 20px 0;
+            letter-spacing: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
+            }
+            to {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.8);
+            }
+        }
+
+        .separador {
+            font-size: 3rem;
+            color: #FFD700;
+            margin: 0 20px;
+        }
+
+        .fecha {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #FFF8DC;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .construccion {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: #F5DEB3;
+            margin-top: 40px;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            letter-spacing: 3px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .chacana {
+            font-size: 3rem;
+            margin: 30px 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .location {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: #F5DEB3;
+            margin-top: 25px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .nombres {
+                font-size: 3rem;
+            }
+            .fecha {
+                font-size: 1.8rem;
+            }
+            .construccion {
+                font-size: 1.3rem;
+            }
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>En construcción, vuelve más tarde 🚧</h1>
+    <div class="container">
+        <div class="ornament">✦ ❖ ✦</div>
+        
+        <h1 class="nombres">Melissa <span class="separador">&</span> Ismael</h1>
+        
+        <div class="chacana">⧫</div>
+        
+        <p class="fecha">15 de Agosto, 2026</p>
+        
+        <div class="location">Valle Sagrado · Cusco, Perú</div>
+        
+        <p class="construccion">~ EN CONSTRUCCIÓN ~</p>
+        
+        <div class="ornament" style="margin-top: 30px;">✦ ❖ ✦</div>
+    </div>
 </body>
 </html>
