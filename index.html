@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Melissa & Ismael</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,14 +14,15 @@
 
         body {
             font-family: 'Cormorant Garamond', serif;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+            background: linear-gradient(rgba(52, 25, 15, 0.45), rgba(101, 67, 33, 0.35)), 
                         url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop') center/cover no-repeat fixed;
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
+            padding: 20px;
         }
 
         body::before {
@@ -31,21 +32,22 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+            background: radial-gradient(circle at center, transparent 20%, rgba(87, 44, 17, 0.3) 100%);
             pointer-events: none;
         }
 
         .container {
             text-align: center;
             color: #ffffff;
-            padding: 40px;
-            background: rgba(139, 69, 19, 0.15);
-            border-radius: 20px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            max-width: 800px;
-            animation: fadeIn 1.5s ease-in;
+            padding: 50px 35px;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.25), rgba(101, 67, 33, 0.30));
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+            border: 3px solid rgba(205, 133, 63, 0.4);
+            max-width: 850px;
+            width: 100%;
+            animation: fadeIn 1.8s ease-in;
             position: relative;
             z-index: 1;
         }
@@ -53,7 +55,7 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -61,62 +63,74 @@
             }
         }
 
-        .ornament {
-            font-size: 2.5rem;
-            color: #FFD700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .decoracion-andina {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .rombo {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #CD853F, #8B4513);
+            transform: rotate(45deg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .linea-decorativa {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #CD853F, #8B4513, #CD853F, transparent);
+            margin: 20px auto;
+            max-width: 300px;
         }
 
         .nombres {
-            font-family: 'Great Vibes', cursive;
-            font-size: 5rem;
-            color: #FFD700;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            margin: 20px 0;
-            letter-spacing: 3px;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
-            }
-            to {
-                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.8);
-            }
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: #F5E6D3;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9), 
+                         0 0 25px rgba(205, 133, 63, 0.5);
+            margin: 25px 0;
+            letter-spacing: 4px;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         .separador {
-            font-size: 3rem;
-            color: #FFD700;
-            margin: 0 20px;
+            font-size: 3.5rem;
+            color: #D2B48C;
+            margin: 0 15px;
+            font-family: 'Cinzel Decorative', cursive;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
         }
 
         .fecha {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            color: #FFF8DC;
-            margin: 30px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            letter-spacing: 2px;
-            font-weight: 600;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.2rem;
+            color: #F5DEB3;
+            margin: 35px 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+            letter-spacing: 3px;
+            font-weight: 400;
         }
 
         .construccion {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: #F5DEB3;
+            font-size: 1.6rem;
+            color: #E8D4B8;
             margin-top: 40px;
             font-style: italic;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            letter-spacing: 4px;
             animation: pulse 3s ease-in-out infinite;
+            text-transform: uppercase;
         }
 
         @keyframes pulse {
             0%, 100% {
-                opacity: 0.8;
+                opacity: 0.85;
             }
             50% {
                 opacity: 1;
@@ -124,53 +138,184 @@
         }
 
         .chacana {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 30px 0;
-            color: #FFD700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: #CD853F;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+            filter: drop-shadow(0 0 10px rgba(205, 133, 63, 0.4));
         }
 
         .location {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
-            color: #F5DEB3;
-            margin-top: 25px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.4rem;
+            color: #DCC9AA;
+            margin-top: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             letter-spacing: 2px;
         }
 
+        .patron-textil {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .cuadrado {
+            width: 12px;
+            height: 12px;
+            background: #8B4513;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cuadrado:nth-child(2n) {
+            background: #CD853F;
+        }
+
+        .cuadrado:nth-child(3n) {
+            background: #A0522D;
+        }
+
+        /* Móvil - Tablets pequeñas */
         @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+                margin: 15px;
+                border-width: 2px;
+            }
+            
             .nombres {
                 font-size: 3rem;
+                letter-spacing: 2px;
             }
+            
+            .separador {
+                font-size: 2.5rem;
+                margin: 0 10px;
+            }
+            
             .fecha {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
+                letter-spacing: 2px;
             }
+            
             .construccion {
                 font-size: 1.3rem;
+                letter-spacing: 3px;
             }
+            
+            .chacana {
+                font-size: 2.8rem;
+            }
+            
+            .location {
+                font-size: 1.2rem;
+            }
+            
+            .rombo {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        /* Móviles pequeños */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
             .container {
                 padding: 30px 20px;
-                margin: 20px;
+                margin: 10px;
+            }
+            
+            .nombres {
+                font-size: 2.3rem;
+                letter-spacing: 1px;
+            }
+            
+            .separador {
+                font-size: 2rem;
+                margin: 0 8px;
+            }
+            
+            .fecha {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                margin: 25px 0;
+            }
+            
+            .construccion {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                margin-top: 30px;
+            }
+            
+            .chacana {
+                font-size: 2.5rem;
+                margin: 20px 0;
+            }
+            
+            .location {
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+            
+            .rombo {
+                width: 12px;
+                height: 12px;
+            }
+            
+            .linea-decorativa {
+                max-width: 200px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="ornament">✦ ❖ ✦</div>
+        <div class="decoracion-andina">
+            <div class="rombo"></div>
+            <div class="rombo"></div>
+            <div class="rombo"></div>
+        </div>
         
-        <h1 class="nombres">Melissa <span class="separador">&</span> Ismael</h1>
+        <div class="linea-decorativa"></div>
         
-        <div class="chacana">⧫</div>
+        <h1 class="nombres">Ismael <span class="separador">&</span> Ismael</h1>
+        
+        <div class="chacana">✦</div>
+        
+        <div class="patron-textil">
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+        </div>
         
         <p class="fecha">15 de Agosto, 2026</p>
         
         <div class="location">Valle Sagrado · Cusco, Perú</div>
         
-        <p class="construccion">~ EN CONSTRUCCIÓN ~</p>
+        <div class="linea-decorativa"></div>
         
-        <div class="ornament" style="margin-top: 30px;">✦ ❖ ✦</div>
+        <p class="construccion">~ En Construcción ~</p>
+        
+        <div class="patron-textil" style="margin-top: 35px;">
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+        </div>
+        
+        <div class="decoracion-andina" style="margin-top: 25px; margin-bottom: 0;">
+            <div class="rombo"></div>
+            <div class="rombo"></div>
+            <div class="rombo"></div>
+        </div>
     </div>
 </body>
 </html>
